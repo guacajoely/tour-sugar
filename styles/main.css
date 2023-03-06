@@ -17,19 +17,21 @@ h1,h2,h3,h4,h5,h6 {
   letter-spacing: 2px;
 }
 
+.bookings{
+    padding: 1rem;
+    min-width: 500px;
+}
+
 .lists {
     display: flex;
     justify-content: space-evenly;
+    max-width: 700px;
 }
 
 .column {
     flex-basis: 24%;
     margin: 0 2rem;
     border: 1px dotted goldenrod;
-
     padding: 1rem;
-}
-
-.bookings {
-    padding: 1rem 5rem;
+    min-width: 180px;
 }

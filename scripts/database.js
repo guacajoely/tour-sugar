@@ -46,7 +46,6 @@ const database = {
         sqFeet: 2000,
         maxOcupancy: 120
         }
-
     ],
 
     bookings: [

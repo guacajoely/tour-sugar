@@ -1,4 +1,3 @@
-
 import { bandList } from "./bands.js"
 import { venueList } from "./venues.js"
 import { bookingsList } from "./bookings.js"
