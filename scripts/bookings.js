@@ -6,7 +6,7 @@ export const bookingsList = () => {
     let bookingsHTML = "<ul>"
 
     for (const bookingObject of allBookings) {
-        bookingsHTML += `<li>${bookingObject.bandName} is playing at ${bookingObject.venueName} on ${bookingObject.bookDate}</li>`
+        bookingsHTML += `<li class="booking--${bookingObject.id}">${bookingObject.bandName} is playing at ${bookingObject.venueName} on ${new Date(bookingObject.bookDate).toLocaleDateString()}</li>`
     }
 
     bookingsHTML += "</ul>"
