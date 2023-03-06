@@ -38,7 +38,15 @@ const database = {
         address: "5000 3rd Avenue",
         sqFeet: 3700,
         maxOcupancy: 300
+        },
+        { 
+        id: 3,
+        name: "The Office",
+        address: "505 8th Street",
+        sqFeet: 2000,
+        maxOcupancy: 120
         }
+
     ],
 
     bookings: [

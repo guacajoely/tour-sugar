@@ -48,10 +48,17 @@ document.addEventListener("click",  (clickEvent) => {
                 }
             }
 
-            const bookedBandsString = bookedBandsArray.join(' and ');
+            //ONLY RETURN ALERT IF bookedBandsArray IS NOT EMPTY
+            if(bookedBandsArray.length > 0){
 
-            // INSERT MATCHINGPET AND FOUNDWALKER NAMES INTO ALERT
-            window.alert(`${bookedBandsString} are booked to play at ${matchingVenueName}`)
+                const bookedBandsString = bookedBandsArray.join(' and ');
+                // INSERT bookedBandsString AND matchingVenueName INTO ALERT
+                window.alert(`${bookedBandsString} are booked to play at ${matchingVenueName}`)
+            }
+
+            else{
+                window.alert(`no bands are booked to play at ${matchingVenueName} yet`)
+            }
 
         }
     }
