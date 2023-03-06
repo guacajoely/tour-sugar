@@ -17,12 +17,12 @@ h1,h2,h3,h4,h5,h6 {
   letter-spacing: 2px;
 }
 
-.details {
+.lists {
     display: flex;
     justify-content: space-evenly;
 }
 
-.detail--column {
+.column {
     flex-basis: 24%;
     margin: 0 2rem;
     border: 1px dotted goldenrod;
@@ -30,6 +30,6 @@ h1,h2,h3,h4,h5,h6 {
     padding: 1rem;
 }
 
-.assignments {
+.bookings {
     padding: 1rem 5rem;
 }

@@ -1,47 +1,18 @@
-const database = {
+import { getBands } from "./database.js"
+const allBands = getBands()
 
-    bands: [
-        { name: "Hoopity Hooplahs", 
-        memberCount: 4,
-        genre: "punk",
-        founded: 1999
-        },
+export const bandList = () => {
+    
+    let bandsHTML = "<ul>"
 
-    ],
+    for (const bandObject of allBands) {
+        bandsHTML += `<li>${bandObject.name}</li>`
+    }
 
-    venues: [
-        { name: "Pittstainz",
-        address: "100 main st",
-        sqFeet: 1000,
-        maxOcupancy: 40
-    },
+    bandsHTML += "</ul>"
 
-    ],
-
-    bookings: [{
-        id: 1,
-        name: "Alphonse Meron",
-        email: "ameron0@mashable.com"
-    }, 
-    {
-        id: 2,
-        name: "Damara Pentecust",
-        email: "dpentecust1@apache.org"
-    }, 
- ]
-
- 
+    return bandsHTML
 }
 
-export const getBands = () => {
-    return database.walkers.map(walkerObject => ({...walkerObject}))
-}
-
-export const getVenues = () => {
-    return database.pets.map(petObject => ({...petObject}))
-}
-
-export const getBookings = () => {
-    return database.cities.map(cityObject => ({...cityObject}))
-}
+// When a band name is clicked, a window alert should be presented to the user that displays all of the venues at which the band is playing.
 
