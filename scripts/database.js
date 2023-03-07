@@ -53,24 +53,18 @@ const database = {
         id: 1,
         bandID: 2,
         venueID: 1,
-        bandName: "Hoopity Hooplahs",
-        venueName: "Pittstainz",
         bookDate: 1612638112396
         },
         {
         id: 2,
         bandID: 1,
         venueID: 2,
-        bandName: "The New Doodz",
-        venueName: "That One Place",
         bookDate: 1614528112396
         },
         {
         id: 3,
         bandID: 2,
         venueID: 2,
-        bandName: "Hoopity Hooplahs",
-        venueName: "That One Place",
         bookDate: 1614598112396
         }
         

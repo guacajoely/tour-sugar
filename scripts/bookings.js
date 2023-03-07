@@ -1,12 +1,37 @@
 import { getBookings } from "./database.js"
 const allBookings = getBookings()
 
+// FIRST WE ALSO NEED TO IMPORT THE ARAY OF BANDS AND VENUES TO GET THE BAND NAME AND VENUE NAME NOW THAT THEY ARE IN SEPARATE ARRAYS
+import { getBands } from "./database.js"
+const allBands = getBands()
+
+import { getVenues } from "./database.js"
+const allVenues = getVenues()
+
+
 export const bookingsList = () => {
     
     let bookingsHTML = "<ul>"
 
     for (const bookingObject of allBookings) {
-        bookingsHTML += `<li id="booking--${bookingObject.id}">${bookingObject.bandName} is playing at ${bookingObject.venueName} on ${new Date(bookingObject.bookDate).toLocaleDateString()}</li>`
+
+        //GRAB MATCHING BANDNAME FOR EACH BOOKING 
+        let bookedBand = null
+        for (const bandObject of allBands){
+            if (bookingObject.bandID === bandObject.id){
+                bookedBand = bandObject.name
+            }
+        }
+
+        //GRAB MATCHING VENUENAME FOR EACH BOOKING
+        let bookedVenue = null
+        for (const venueObject of allVenues){
+            if (bookingObject.venueID === venueObject.id){
+                bookedVenue = venueObject.name
+            }
+        }
+
+        bookingsHTML += `<li id="booking--${bookingObject.id}">${bookedBand} is playing at ${bookedVenue} on ${new Date(bookingObject.bookDate).toLocaleDateString()}</li>`
     }
 
     bookingsHTML += "</ul>"
@@ -16,10 +41,6 @@ export const bookingsList = () => {
 
 
 // When a booking is clicked, a window alert should be presented to the user that displays all of the band information (name, genre, year formed, number of members).
-
-// FIRST WE ALSO NEED TO IMPORT THE ARAY OF BANDS 
-import { getBands } from "./database.js"
-const allBands = getBands()
 
 document.addEventListener("click",  (clickEvent) => {
 
