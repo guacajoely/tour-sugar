@@ -48,6 +48,7 @@ document.addEventListener("click",  (clickEvent) => {
                 }
             }
 
+
             //ONLY RETURN ALERT IF bookedBandsArray IS NOT EMPTY
             if(bookedBandsArray.length > 0){
 

@@ -73,6 +73,75 @@ const database = {
         venueName: "That One Place",
         bookDate: 1614598112396
         }
+        
+    ],
+        
+//EXPLORER CHAPTER - ADDING bandMembers ARRAY
+    bandMembers: [
+        { 
+        id: 1,
+        firstName: "Jimmy", 
+        lastName: "Jackson", 
+        yearBorn: 2000, 
+        bandRole: "Lead Singer",
+        bandID: 1
+        },
+        { 
+        id: 2,
+        firstName: "Jimbo", 
+        lastName: "Henderson", 
+        yearBorn: 1999, 
+        bandRole: "Guitar",
+        bandID: 1
+        },
+        { 
+        id: 3,
+        firstName: "James", 
+        lastName: "Jameson", 
+        yearBorn: 2001, 
+        bandRole: "Drums",
+        bandID: 1
+        },
+        { 
+        id: 4,
+        firstName: "Michael", 
+        lastName: "Smith", 
+        yearBorn: 1982, 
+        bandRole: "Plays literally everything",
+        bandID: 3
+        },
+        { 
+        id: 5,
+        firstName: "John", 
+        lastName: "Johnson", 
+        yearBorn: 1980, 
+        bandRole: "Lead Singer",
+        bandID: 2
+        },
+        { 
+        id: 6,
+        firstName: "Dick", 
+        lastName: "Johnson", 
+        yearBorn: 1982, 
+        bandRole: "Guitar",
+        bandID: 2
+        },
+        { 
+        id: 7,
+        firstName: "Barry", 
+        lastName: "Little", 
+        yearBorn: 1981, 
+        bandRole: "Bass",
+        bandID: 2
+        },
+        { 
+        id: 8,
+        firstName: "Terry", 
+        lastName: "Smith", 
+        yearBorn: 1979, 
+        bandRole: "Drums",
+        bandID: 2
+        },
     ]
 }
 
@@ -89,5 +158,11 @@ export const getVenues = () => {
 
 export const getBookings = () => {
     return database.bookings.map(bookingObject => ({...bookingObject}))
+}
+
+
+//EXPLORER CHAPTER - ADDING EXPORT FOR NEW bandMembers ARRAY
+export const getBandMembers = () => {
+    return database.bandMembers.map(bandMemberObject => ({...bandMemberObject}))
 }
 
